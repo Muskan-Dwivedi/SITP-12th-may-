@@ -1,0 +1,124 @@
+Assignment : 1
+
+  Ques-1) Write a python script that accepts a number from the command line and checks whether it is prime.Explain how command-line arguments are        accessed. 
+ Ans-) Command line argument are value passed to a python program when it executed from the command prompt or terminal.  
+      Python uses the 'sys' module to access command line argument.
+        Program:-      
+           import sys   
+            # taking numbers from command line                                                                    num = int(sys.argv[1]) 
+        # checking prime number       
+  if num > 1:         
+  for i in range (2,num):       
+     if num % i == 0;          
+    print(num, is not a prime number")        
+      break   
+      else:             
+ print(num,"is a prime number")      
+   else:           
+  print(num,"is not a prime number")    
+   # The sys module provide access to command line argument.      
+  It condition list called sys.argv.    
+   # argv means argument vector to store command line input as a list of strings.   
+    # sys.argv[0] always contain program
+
+
+
+Ques-2)  Write a program using different data types to demonstrate the difference between 'is' and and'=='.Explain the output
+  Ans-) 'is' is a identity operator which is used to check object identity.        
+ It refer the same object in memory location.               
+ '==' is equality operator which is used to check values equality.  
+      It is used to compare the values of two variable or object.         
+ program- (i)TUPLE       
+ a = (1,2,3)      
+  b = (1,2,3)     
+   print(a is b)          
+  print(a==b)       
+ output-              
+  true # It is true because both tuples are same    
+  true # It is true because this have same memory location              
+ (ii)LIST        
+a = [1,2,3]       
+ b = [1,2,3]        
+print(a==b)       
+ print(a is b)       
+ output-               
+true # It is true because both lists have same inputs               
+false # It is false because this don't have same memory location          
+(iii)INT        
+a = 100       
+ b = 100        
+print(a==b)       
+ print(a is b)        
+output-              
+ true # It is true because this have same values              
+ true # It is true because this have same memory location        
+(iv)FLOAT        
+a = 14.5        
+b = 14.5       
+ print(a==b)        
+print(a is b)       
+ output-                
+true # It is true because both have same values 
+ false # It may be true or false(because it can have different memory location)  
+
+ Ques-4) Using a single list comprehension,generate a list of squares of numbers from 1 to 20 that are divsible by both 2 and 5. 
+
+Ans-) List comprehension:- A python list comprehension consists of brackets containing the expression, which is executed  for loop to itrate                               over each element in the python list.            
+ /* Program to generate list of square of numbers from 1 to 20 that are divisible by both 2 and 5.             
+ square = [x**2 for x in range (1,21) if x % 2==0 and x % 5 == 0]      
+ # range (1,21) generate numbers from 1 to 20    
+   # for loop is used visit to every numbers one by one.     
+  # x % 2== 0 and x % 5 to checks the numbers is divisible by both 2 and 5.      
+ Example:-              
+   10 and 20 satifying the condition              
+   10^2 = 100                
+ 20^2 = 400 
+
+ Ques-5) Write a user-defined function that returns the largest and smallest values from a list using buit-in functions. Ans-)  
+def find_largest_small(list):      
+      largest  = list(a)            
+smallest = list(b)                  
+  for sum in list:         
+ if num > largest:        
+    largest = num         
+  if num < smallest:       
+     smallest = num             
+ return largest,smallest 
+      #Main program         
+ number = [12,45,7,89,23,5,67]      
+          large,small = find_largest_small(number)         
+ print("largest value",large)       
+ print("smallest value",small)  
+
+ Explanation:-     
+ 1) Function definition:-  def find_largest_small(list):      
+  # def is keyword to define function.     
+   # find_largest_small is the function name.      
+  # list is parameter to receive list from main program.      
+ 2) Initializing variables:-        # list[0] means first element of list.     
+  3) Loop through list:- for num is list:      
+ # for loop visit every element in list one by one.    
+         4) Finding the largest value :-      
+  # check current numbers is greater then current largest value.       
+    5) Finding smallest value:-      
+  # check current number is smallest then current smallest value.         
+   6) Returing value:-     
+
+  # function sends both value back to the main program.      
+  7) Main program:-      
+ # a list named numbers is created.         
+   8) #Function is called with the list numbers.      
+ output:-     
+         largest value = 89            
+  smallest value = 5    
+
+
+
+
+
+
+
+
+
+
+
